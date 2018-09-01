@@ -12,10 +12,12 @@
     <input type="text" id="input" value="">
     <br>
     <br>
-    <input type= "checkbox" id="vul"> Vulnerability
+    <div id=vulnerability>
+      <input type= "checkbox" id="vul" onclick="colorchange()"> Vulnerability
+    </div>
     <br>
     <p id="output"> </p>
-    <script>
+    <script> //SCORE CALCULATOR
         function cal() {
           var input = document.getElementById("input").value;
           var vul = document.getElementById("vul").checked;
@@ -95,7 +97,13 @@
           document.getElementById("output").innerHTML = "Score = " + score
         }
     </script>
-
+    <script> //COLOR CHANGE
+      document.getElementById("vulnerability").style.color= "green"
+      function colorchange()
+      {if (document.getElementById("vulnerability").style.color == "green")
+      {document.getElementById("vulnerability").style.color = "red"}
+      else document.getElementById("vulnerability").style.color = "green"}
+    </script>
     <button onclick="cal()">Calculate</button>
   </body>
 </html>
