@@ -9,13 +9,11 @@
     <br>
     ex. 3ntxx+1, 4H=, 2S-3
     <br>
-    <input type="text" id="input" value="">
+    <input type="text" id="input" onchange="cal()" value="">
     <br>
     <br>
     <div id=vulnerability>
-      <input type= "checkbox" id="vul" onclick="colorchange()"> Vulnerability
-    </div>
-    <br>
+      <input type= "checkbox" id="vul" onchange="cal()" onclick="colorchange()"> Vulnerability </div>
     <p id="output"> </p>
     <script> //SCORE CALCULATOR
         function cal() {
@@ -104,6 +102,5 @@
       {document.getElementById("vulnerability").style.color = "red"}
       else document.getElementById("vulnerability").style.color = "green"}
     </script>
-    <button onclick="cal()">Calculate</button>
   </body>
 </html>
